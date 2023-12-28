@@ -8,6 +8,7 @@ use Ramsey\Uuid\Uuid;
 
 class XwTpLog extends File
 {
+
     public function save(array $log): bool
     {
 
