@@ -20,7 +20,7 @@ class XwHelp
 
     }
 
-    //模擬處理data轉json
+    //提示語處理data轉json
     public static function msgToJson($message, $isJson = true)
     {
         $trace = debug_backtrace();
