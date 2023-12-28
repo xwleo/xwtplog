@@ -29,13 +29,11 @@ class XwTpLog extends File
             foreach ($val as $msg) {
                 $line = 0;
                 $file = '';
-                $projectName = '';
                 $parsed = @json_decode($msg, true);
                 if ($parsed != null) {
                     $msg = !empty($parsed['message']) ? $parsed['message'] : '';
                     $line = !empty($parsed['line']) ? $parsed['line'] : '';
                     $file = !empty($parsed['file']) ? $parsed['file'] : '';
-                    $project  = !empty($parsed['project']) ? $parsed['project'] : '';
                 } else if (!is_string($msg)) {
                     $msg = var_export($msg, true);
                 }
