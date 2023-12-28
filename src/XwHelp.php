@@ -32,6 +32,7 @@ class XwHelp
         if ($isJson) {
             return json_encode($data);
         }
+
         return $data;
     }
 }
