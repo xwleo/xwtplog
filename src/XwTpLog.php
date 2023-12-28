@@ -19,9 +19,7 @@ class XwTpLog extends File
 
         $path = dirname($destination);
         !is_dir($path) && mkdir($path, 0755, true);
-
         $project = Config::get('app.project');
-
         $params = Request::instance()->param();
         $info = [];
         // 日志信息封装
