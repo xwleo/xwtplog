@@ -1,8 +1,8 @@
 {
-  "name": "xwleo/tplogdriver",
+  "name": "xwleo/xwtplog",
   "description": "用於監控系統的日誌渠道",
   "license": "Apache License",
-  "homepage": "https://github.com/xwleo/tplogdriver",
+  "homepage": "https://github.com/xwleo/xwtplog",
   "require": {
     "php": ">=8.1.0",
     "topthink/framework": "^8.0",
@@ -12,13 +12,13 @@
     {
       "name": "xwleo",
       "email": "xwleo@gmail.com",
-      "homepage": "https://github.com/xwleo/tplogdriver",
+      "homepage": "https://github.com/xwleo/xwtplog",
       "role": "Developer"
     }
   ],
   "autoload": {
     "psr-4": {
-      "TpLogDriver\\": "src/"
+      "XwTpLog\\": "src/"
     }
   }
 }

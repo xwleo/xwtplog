@@ -1,12 +1,12 @@
 <?php
 
-namespace TpLogDriver;
+namespace XwTpLog;
 
 use think\facade\Request;
 use think\log\driver\File;
 use Ramsey\Uuid\Uuid;
 
-class TpLogDriver extends File
+class XwTpLog extends File
 {
 
     public function save(array $log): bool
@@ -35,13 +35,13 @@ class TpLogDriver extends File
                     $msg = !empty($parsed['message']) ? $parsed['message'] : '';
                     $line = !empty($parsed['line']) ? $parsed['line'] : '';
                     $file = !empty($parsed['file']) ? $parsed['file'] : '';
-                    $projectName  = !empty($parsed['project_name']) ? $parsed['project_name'] : '';
+                    $project  = !empty($parsed['project']) ? $parsed['project'] : '';
                 } else if (!is_string($msg)) {
                     $msg = var_export($msg, true);
                 }
 
                 if ($this->config['json']) {
-                    $message[] = json_encode(['time' => $time, 'type' => $type, 'project' => $projectName, 'uuid' => $uuid, 'msg' => $msg, 'line' => $line, 'file' => $file, 'params' => $params], $this->config['json_options']);
+                    $message[] = json_encode(['time' => $time, 'type' => $type, 'project' => $project, 'uuid' => $uuid, 'msg' => $msg, 'line' => $line, 'file' => $file, 'params' => $params], $this->config['json_options']);
                 } else {
                     $message[] = sprintf($this->config['format'], $time, $type, $msg);
                 }
