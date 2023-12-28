@@ -43,9 +43,7 @@ class XwTpLog extends File
                 } else {
                     $message[] = sprintf($this->config['format'], $time, $type, $msg);
                 }
-
             }
-
             if (true === $this->config['apart_level'] || in_array($type, $this->config['apart_level'])) {
                 // 独立记录的日志级别
                 $filename = $this->getApartLevelFile($path, $type);
@@ -59,7 +57,6 @@ class XwTpLog extends File
         if ($info) {
             return $this->write($info, $destination);
         }
-
         return true;
     }
 }
