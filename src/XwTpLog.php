@@ -12,6 +12,7 @@ class XwTpLog extends File
     public function save(array $log): bool
     {
         //生成uuid
+
         $uuid = Uuid::uuid4()->toString();
 
         $destination = $this->getMasterLogFile();
