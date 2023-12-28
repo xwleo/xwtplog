@@ -10,6 +10,7 @@ class XwTpLog extends File
 {
     public function save(array $log): bool
     {
+
         // 在这里添加你需要的信息
         $uuid = Uuid::uuid4()->toString();
 
