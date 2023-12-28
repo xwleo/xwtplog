@@ -21,7 +21,7 @@ class XwHelp
     }
 
     //模擬處理data轉json
-    public static function dataToJson($data)
+    public static function dataToJson($data, $isJson = true)
     {
         $data = [
             'code' => !empty($data['code']) ? $data['code'] : 0,
@@ -29,6 +29,9 @@ class XwHelp
             'file' => !empty($data['file']) ? $data['file'] : '',
             'line' => !empty($data['line']) ? $data['line'] : 0,
         ];
+        if ($isJson) {
+            return json_encode($data);
+        }
         return $data;
     }
 }
