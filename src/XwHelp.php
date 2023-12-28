@@ -20,7 +20,7 @@ class XwHelp
 
     }
 
-    //處理data轉json
+    //模擬處理data轉json
     public static function dataToJson($data)
     {
         $data = [
