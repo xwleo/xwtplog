@@ -19,4 +19,16 @@ class XwHelp
         return $data;
 
     }
+
+    //處理data轉json
+    public static function dataToJson($data)
+    {
+        $data = [
+            'code' => !empty($data['code']) ? $data['code'] : 0,
+            'message' => !empty($data['message']) ? $data['message'] : '',
+            'file' => !empty($data['file']) ? $data['file'] : '',
+            'line' => !empty($data['line']) ? $data['line'] : 0,
+        ];
+        return $data;
+    }
 }
