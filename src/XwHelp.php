@@ -4,7 +4,7 @@ namespace XwTpLog;
 
 class XwHelp
 {
-    //处理Exception为简单格式
+    //处理Exception为简单格式。
     public static function exceptionToJson($e, $isJson = true)
     {
         $data = [
