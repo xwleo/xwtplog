@@ -1,7 +1,7 @@
 {
   "name": "xwleo/xwtplog",
   "description": "用於監控系統的日誌渠道",
-  "license": " GNU LESSER GENERAL PUBLIC LICENSE",
+  "license": "GNU LESSER GENERAL PUBLIC LICENSE",
   "homepage": "https://github.com/xwleo/xwtplog",
   "require": {
     "php": ">=8.1.0",
