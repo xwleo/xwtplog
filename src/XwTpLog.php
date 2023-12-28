@@ -2,6 +2,7 @@
 
 namespace XwTpLog;
 
+use think\facade\Config;
 use think\facade\Request;
 use think\log\driver\File;
 use Ramsey\Uuid\Uuid;
@@ -17,6 +18,8 @@ class XwTpLog extends File
 
         $path = dirname($destination);
         !is_dir($path) && mkdir($path, 0755, true);
+
+        $project = Config::get('app.project');
 
         $params = Request::instance()->param();
         $info = [];
