@@ -19,4 +19,9 @@ class XwHelp
         return $data;
 
     }
+
+    public function demo()
+    {
+
+    }
 }
